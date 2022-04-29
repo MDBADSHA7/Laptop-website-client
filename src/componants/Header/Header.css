@@ -1,0 +1,18 @@
+.header-container nav a {
+    margin-right: 20px;
+    font-size: x-large;
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.header-container {
+    text-align: center;
+    background-color: blue;
+}
+
+.header-container nav a:hover {
+    color: red;
+}
