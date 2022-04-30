@@ -1,0 +1,49 @@
+.card {
+    border: 5px solid red;
+    border-radius: 15px;
+}
+
+.name {
+    color: crimson;
+    font-size: xx-large;
+}
+
+.suppliar {
+    color: darkgreen;
+    font-size: x-large;
+}
+
+.discription {
+    color: blue;
+    font-size: larger;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.quantity {
+    color: red;
+    font-size: xx-large;
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.price {
+    color: blue;
+    font-size: xx-large;
+}
+
+.Update-button {
+    background-color: coral;
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: x-large;
+    border: 5px solid coral;
+    border-radius: 5px;
+}
+
+.Update-button:hover {
+    background-color: brown;
+    color: wheat;
+    border: 5px solid brown;
+    transition-duration: 5s;
+}
