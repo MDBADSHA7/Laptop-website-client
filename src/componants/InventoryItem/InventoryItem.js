@@ -20,14 +20,6 @@ const InventoryItem = () => {
                 }
 
             </div>
-            {/* {
-                products.map(product => <li>
-                    {product.name}
-                    <img src={product.image} alt="" />
-                    {product.discription}
-                </li>)
-
-            } */}
         </div>
     );
 };

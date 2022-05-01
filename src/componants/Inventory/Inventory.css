@@ -1,15 +1,25 @@
-.card {
-    border: 5px solid red;
-    border-radius: 15px;
-    background-color: goldenrod;
+.container {
+    width: auto;
+    border: 10px solid lightcoral;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background-color: blanchedalmond;
 }
 
-.card:hover {
-    background-color: gold;
+.container:hover {
+    background-color: brown;
     transition-duration: 5s;
 }
 
-.name {
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+}
+
+*/ .name {
     color: crimson;
     font-size: xx-large;
 }
@@ -22,7 +32,7 @@
 .discription {
     color: blue;
     font-size: larger;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* font-family: 'Courier New', Courier, monospace; */
 }
 
 .quantity {
@@ -53,3 +63,18 @@
     border: 5px solid brown;
     transition-duration: 5s;
 }
+
+.title {
+    color: red;
+    font-size: xx-large;
+    margin-top: 15px;
+}
+
+.title:hover {
+    color: brown;
+    transition-duration: 4s;
+}
+
+/* .container {
+    border: 10px solid lightseagreen;
+} */
