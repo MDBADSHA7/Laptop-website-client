@@ -19,7 +19,7 @@
     grid-gap: 100px;
 }
 
-*/ .name {
+.name {
     color: crimson;
     font-size: xx-large;
 }
@@ -55,6 +55,7 @@
     font-size: x-large;
     border: 5px solid coral;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .Update-button:hover {
@@ -74,7 +75,3 @@
     color: brown;
     transition-duration: 4s;
 }
-
-/* .container {
-    border: 10px solid lightseagreen;
-} */

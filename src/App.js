@@ -7,16 +7,23 @@ import Home from './componants/Home/Home';
 import Login from './componants/Login/Login';
 import NotFound from './componants/NotFound/NotFound';
 import ProductDetails from './componants/ProductDetails/ProductDetails';
+import RequireAuth from './componants/RequireAuth/RequireAuth';
 
 function App() {
   return (
     <div className="App">
       <Header> </Header>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='product-details' element={<ProductDetails></ProductDetails>}></Route>
-        <Route path='blogs' element={<Blogs></Blogs>}></Route>
-        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/product-details" element=
+          {
+            <RequireAuth>
+              <ProductDetails></ProductDetails>
+            </RequireAuth>
+          }>
+        </Route>
+        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/login" element={<Login></Login>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>

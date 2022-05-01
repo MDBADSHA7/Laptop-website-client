@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import image1 from '../Images/img-1.jpg'
 import image2 from '../Images/img-2.jpg'
 import image3 from '../Images/img-3.jpg'
@@ -6,6 +7,10 @@ import image4 from '../Images/img-4.jpg'
 import image5 from '../Images/img-5.jpg'
 import image6 from '../Images/img-6.jpg'
 import './Inventory.css'
+
+const navigateProductDetails = event => {
+    Navigate('/Product-details')
+}
 const Inventory = () => {
     return (
         <div className='container'>
@@ -20,7 +25,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 30000</p>
-                            <button className='Update-button'>Update</button>
+                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -33,7 +38,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 80000</p>
-                            <button className='Update-button'>Update</button>
+                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -46,7 +51,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 75000</p>
-                            <button className='Update-button'>Update</button>
+                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -59,7 +64,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 44000</p>
-                            <button className='Update-button'>Update</button>
+                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -72,7 +77,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 58000</p>
-                            <button className='Update-button'>Update</button>
+                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -85,7 +90,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 95000</p>
-                            <button className='Update-button'>Update</button>
+                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
