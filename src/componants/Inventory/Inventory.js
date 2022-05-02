@@ -25,7 +25,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 30000</p>
-                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
+                            <Link to="/productdetails" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 80000</p>
-                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
+                            <Link to="/productdetails" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 75000</p>
-                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
+                            <Link to="/productdetails" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 44000</p>
-                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
+                            <Link to="/productdetails" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 58000</p>
-                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
+                            <Link to="/productdetails" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ const Inventory = () => {
                             <p class="quantity">Quantity:1</p>
                             <p class="suppliar">Supplier : AR TELECOM</p>
                             <p class="price">Price : $ 95000</p>
-                            <Link to="/product-details" className='Update-button' onClick={navigateProductDetails}>Update</Link>
+                            <Link to="/productdetails" className='Update-button' onClick={navigateProductDetails}>Update</Link>
                         </div>
                     </div>
                 </div>
