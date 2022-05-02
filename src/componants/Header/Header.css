@@ -9,6 +9,7 @@
 }
 
 .header-container {
+    position: sticky;
     text-align: center;
     background-color: blue;
 }

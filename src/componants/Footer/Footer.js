@@ -3,6 +3,7 @@ import './Footer.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 import { ChatAltIcon, LocationMarkerIcon, MailIcon, PhoneIcon, PhotographIcon, PlayIcon } from '@heroicons/react/solid'
+// import Loading from '../Loading/Loading';
 const Footer = () => {
     return (
         <div className='footer'>
@@ -14,7 +15,7 @@ const Footer = () => {
             <br />
             <a href="https://www.facebook.com/foysalahamed.badsha">
                 <ChatAltIcon className='Icon'></ChatAltIcon></a>
-            <a href="https://lh3.googleusercontent.com/a-/AOh14GgdEXVl-9TYnjJGZEmaOS2s8ht4M0V7Z6myOkv4=s96-c"><PhotographIcon className='Icon'></PhotographIcon></a>
+            <a href="https://i.ibb.co/x5FRY5k/131692351-1365374810482039-8592008014066332892-n.jpg"><PhotographIcon className='Icon'></PhotographIcon></a>
             <a href="https://youtu.be/rztWlsghmuE"><PlayIcon className='Icon'></PlayIcon></a>
 
             <h1>Copyrite <FontAwesomeIcon icon={faCopyright}></FontAwesomeIcon> 2022 MD Badsha's Website</h1>

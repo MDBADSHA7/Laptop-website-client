@@ -4,13 +4,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import app from '../../firebase.init';
 import { } from '@fortawesome/free-solid-svg-icons';
 
+// Toast
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 import './Login.css'
-import { Navigate } from 'react-router-dom';
+// import { Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
+import Loading from '../Loading/Loading';
+// import useFirebase from '../../hooks/useFirebase';
 const auth = getAuth(app)
 const Login = () => {
+    // const { signInWithGoogle } = useFirebase();
     const [user, setUser] = useState({});
-
+    const [error, setError] = useState('');
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
     const handleGoogleSignIn = () => {
@@ -34,35 +43,48 @@ const Login = () => {
                 console.error(error)
             })
     }
-    // const handleSignOut = () => {
-    //     signOut(auth)
-    //         .then(() => {
-    //             setUser({});
-    //         })
-    //         .catch(error => {
-    //             setUser({});
-    //         })
-    // }
-    const [validated, setValidated] = useState(false);
+    const handleSignOut = () => {
+        signOut(auth)
+            .then(() => {
+                setUser({});
+            })
+            .catch(error => {
+                setUser({});
+            })
+    }
+    const [validated, setValidated, loading] = useState(false);
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('')
-    // const [error, setError] = useState('')
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     const handleEmailBlur = event => {
         setEmail(event.target.value)
     }
     const handlePasswordBlur = event => {
         setPassword(event.target.value)
     }
+
+
+
     const handleFormSubmit = event => {
+        event.preventDefault();
         const form = event.currentTarget;
+
         if (form.checkValidity() === false) {
-            event.preventDefault();
+
             event.stopPropagation();
             return;
         }
+        if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+            setError('Password should contain at least one special charecter')
+            return
+        }
 
         setValidated(true);
+        setError('')
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
@@ -80,12 +102,14 @@ const Login = () => {
         sendEmailVerification(auth.currentUser)
             .then(() => {
                 console.log('Email verification Send');
+                toast('sent email')
             })
     }
     const handlePasswordReset = () => {
         sendPasswordResetEmail(auth, email)
             .then(() => {
                 console.log('Reset password sent')
+                toast('Reseat sent email')
             })
     }
     return (
@@ -108,6 +132,7 @@ const Login = () => {
                             Please give a valid password.
                         </Form.Control.Feedback>
                     </Form.Group>
+                    <p className='text-danger'>{error}</p>
                     <Button variant="primary" type="submit">
                         Sign In
                     </Button>
@@ -116,11 +141,11 @@ const Login = () => {
                         Forget Password?
                     </Button>
                 </Form>
-                {/* <p>New to our service ?<Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}> Please Register</Link></p> */}
+                <ToastContainer></ToastContainer>
             </div>
             {
-                // user.email ? <button className='SignIn-btn' onClick={handleSignOut}>Sign Out</button>
-                user.email ? <Navigate to="/productdetails"></Navigate>
+                user.email ? <button className='SignIn-btn' onClick={handleSignOut}>Sign Out</button>
+                    // user.email ? <Navigate to="/productdetails"></Navigate>
                     :
                     <div><button className='SignIn-btn' onClick={handleGoogleSignIn}>Google Sign In</button>
                         <br />

@@ -1,6 +1,5 @@
 import React from 'react';
-import InventoryItem from '../InventoryItem/InventoryItem';
-
+import InventoryItem from '../InventoryItem/InventoryItem'
 const ProductDetails = () => {
     return (
         <div>

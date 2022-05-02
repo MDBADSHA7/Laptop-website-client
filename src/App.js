@@ -24,6 +24,7 @@ function App() {
         </Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+        {/* <Route path="/logout" element={<Login></Login>}></Route> */}
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
