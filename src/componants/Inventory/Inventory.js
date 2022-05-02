@@ -8,10 +8,11 @@ import image5 from '../Images/img-5.jpg'
 import image6 from '../Images/img-6.jpg'
 import './Inventory.css'
 
-const navigateProductDetails = event => {
-    Navigate('/Product-details')
-}
+
 const Inventory = () => {
+    const navigateProductDetails = event => {
+        Navigate('/productdetails')
+    }
     return (
         <div className='container'>
             <h2 className='title'>Inventory-Item</h2>

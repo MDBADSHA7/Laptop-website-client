@@ -14,6 +14,7 @@ import './Login.css'
 // import { Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import Loading from '../Loading/Loading';
+import { Navigate } from 'react-router-dom';
 // import useFirebase from '../../hooks/useFirebase';
 const auth = getAuth(app)
 const Login = () => {
@@ -145,7 +146,6 @@ const Login = () => {
             </div>
             {
                 user.email ? <button className='SignIn-btn' onClick={handleSignOut}>Sign Out</button>
-                    // user.email ? <Navigate to="/productdetails"></Navigate>
                     :
                     <div><button className='SignIn-btn' onClick={handleGoogleSignIn}>Google Sign In</button>
                         <br />
