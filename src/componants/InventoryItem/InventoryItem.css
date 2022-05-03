@@ -18,6 +18,10 @@
     text-align: center;
 }
 
+.Total-item {
+    color: red;
+}
+
 .product-title:hover {
     color: red;
     transition-duration: 2s;

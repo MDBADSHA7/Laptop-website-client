@@ -36,19 +36,27 @@
     font-size: xx-large;
 }
 
-.Update-button {
-    background-color: coral;
-    color: black;
-    padding-left: 5px;
-    padding-right: 5px;
+.sold {
+    color: red;
     font-size: x-large;
-    border: 5px solid coral;
-    border-radius: 5px;
 }
 
-.Update-button:hover {
+.Delivered-button {
+    background-color: red;
+    color: white;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    font-size: x-large;
+    border: 5px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.Delivered-button:hover {
     background-color: brown;
-    color: wheat;
+    color: gold;
     border: 5px solid brown;
     transition-duration: 5s;
 }
