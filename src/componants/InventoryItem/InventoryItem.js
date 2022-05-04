@@ -4,7 +4,7 @@ import './InventoryItem.css'
 const InventoryItem = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('http://localhost:5000/laptop')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -14,7 +14,7 @@ const InventoryItem = () => {
             <h1 className='Total-item'>Total product : {products.length}</h1>
             <div className='products-container'>
                 {products.map(product => <Product
-                    key={product.id}
+                    key={product._id}
                     product={product}
                 >
                 </Product>)
