@@ -10,6 +10,7 @@ const InventoryItem = () => {
     }, [])
     return (
         <div>
+
             <h2 className='product-title'>Our-Collection</h2>
             <h1 className='Total-item'>Total product : {products.length}</h1>
             <div className='products-container'>
@@ -18,8 +19,8 @@ const InventoryItem = () => {
                     product={product}
                 >
                 </Product>)
-                }
 
+                }
             </div>
         </div>
     );

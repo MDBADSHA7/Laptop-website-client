@@ -2,6 +2,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Blogs from './componants/Blogs/Blogs';
+import DeleteItem from './componants/DeleteItem/DeleteItem';
 import Header from './componants/Header/Header';
 import Home from './componants/Home/Home';
 import Login from './componants/Login/Login';
@@ -23,6 +24,7 @@ function App() {
           }>
         </Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/deleteitem" element={<DeleteItem></DeleteItem>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         {/* <Route path="/logout" element={<Login></Login>}></Route> */}
         <Route path="*" element={<NotFound></NotFound>}></Route>
