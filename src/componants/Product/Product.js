@@ -40,9 +40,12 @@ const Product = ({ product }) => {
                     <p className="price">Price : $ {price}</p>
                     <p className="sold">Sold: {sold}</p>
                     <button className='Delivered-button'>Delivered <TrashIcon className='Icon'></TrashIcon></button>
-                </div></div>
+                </div>
+
+            </div>
 
         </div >
+
     );
 };
 
