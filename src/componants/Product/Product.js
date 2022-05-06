@@ -9,26 +9,12 @@ const Product = ({ product }) => {
             .then(res => res.json())
             .then(data => setUsers(data));
     }, [])
-    // const handleLaptopDelivered = id => {
-    //     const proceed = window.confirm('Do you want to delete?')
-    //     if (proceed) {
-    //         console.log('Delete user with id,', id)
-    //         const url = `https://intense-spire-59334.herokuapp.com/user/${id}`
-    //         fetch(url, {
-    //             method: 'Delete'
-    //         })
-    //             .then(res => res.json())
-    //             .then(data => {
-    //                 console.log(data)
-    //                 if (data.deleteCount > 0) {
-    //                     console.log('Deleted')
-    //                     const remaining = users.filter(user => user._id !== id)
-    //                     setUsers(remaining);
-    //                 }
-    //             })
-    //     }
 
-    // }
+    const handleQuantity = event => {
+        const Quantity = quantity - 1
+        console.log(Quantity)
+    }
+
     return (
         <div className='card' style={{ width: "18rem" }}>
             <div> <img src={image} class="card-img-top" alt="..." />
@@ -39,7 +25,7 @@ const Product = ({ product }) => {
                     <p className="suppliar">Supplier : {supplier}</p>
                     <p className="price">Price : $ {price}</p>
                     <p className="sold">Sold: {sold}</p>
-                    <button className='Delivered-button'>Delivered <TrashIcon className='Icon'></TrashIcon></button>
+                    <button onClick={handleQuantity} className='Delivered-button'>Delivered <TrashIcon className='Icon'></TrashIcon></button>
                 </div>
 
             </div>

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import Product from '../Product/Product';
 import './InventoryItem.css'
 const InventoryItem = () => {
@@ -20,11 +22,23 @@ const InventoryItem = () => {
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [page, size])
+
+    // Manage-Inventory-Link
+
+    const navigate = useNavigate();
+    const ManageInventory = () => {
+        navigate('/manageinventory')
+    }
+
     return (
         <div>
-
-            <h2 className='product-title'>Our-Collection</h2>
-            {/* <h1 className='Total-item'>Total product : {products.length}</h1> */}
+            <h1 className='product-title'>Our-Collection</h1>
+            <h2 className='text-danger'>Restoke-Quantity</h2>
+            <form>
+                <input className='Restoke-Quantity' type="number" placeholder='Restoke-Quantity' required></input>
+                <br />
+                <input className='Restoke' type="submit" value="Restoke" />
+            </form>
             <div className='products-container'>
                 {products.map(product => <Product
                     key={product._id}
@@ -33,6 +47,9 @@ const InventoryItem = () => {
                 </Product>)
 
                 }
+            </div>
+            <div>
+                <Button onClick={ManageInventory} className='Manage-Inventory-btn-2'>Manage-Inventories</Button>
             </div>
             {/* paigination */}
             <div className='paigination'>

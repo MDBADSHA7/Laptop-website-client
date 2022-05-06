@@ -69,9 +69,20 @@
     color: red;
     font-size: xx-large;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .title:hover {
-    color: brown;
+    color: white;
     transition-duration: 4s;
+}
+
+.Manage-Inventory-btn-1 {
+    margin-top: 20px;
+    background-color: coral;
+    color: black;
+    font-size: x-large;
+    border: 5px solid coral;
+    border-radius: 5px;
+    text-decoration: none;
 }

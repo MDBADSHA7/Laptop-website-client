@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import image1 from '../Images/img-1.jpg'
 import image2 from '../Images/img-2.jpg'
 import image3 from '../Images/img-3.jpg'
@@ -13,9 +14,13 @@ const Inventory = () => {
     const navigateProductDetails = event => {
         Navigate('/productdetails')
     }
+    const navigate = useNavigate();
+    const ManageInventory = () => {
+        navigate('/manageinventory')
+    }
     return (
         <div className='container'>
-            <h2 className='title'>Inventory-Item</h2>
+            <h2 className='title'>Inventory-Items</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4 ms-5 me-5">
                 <div class="col">
                     <div class="card">
@@ -96,6 +101,7 @@ const Inventory = () => {
                     </div>
                 </div>
             </div>
+            <Button onClick={ManageInventory} className='Manage-Inventory-btn-1'>Manage-Inventories</Button>
         </div >
     );
 };

@@ -4,12 +4,13 @@ const AddUser = () => {
     const handleAddRestoke = event => {
         event.preventDefault();
         const name = event.target.name.value;
+        const image = event.target.image.value;
         const discription = event.target.discription.value;
         const quantity = event.target.quantity.value;
         const supplier = event.target.supplier.value;
         const price = event.target.name.value;
         const sold = event.target.name.value;
-        const user = { name, discription, quantity, supplier, price, sold };
+        const user = { name, image, discription, quantity, supplier, price, sold };
         fetch('https://intense-spire-59334.herokuapp.com/user', {
             method: 'POST',
             headers: {
@@ -26,9 +27,11 @@ const AddUser = () => {
     }
     return (
         <div>
-            <h1>Pleade Add for restoke.</h1>
+            <h1 className='mt-2 text-success'>Please Add for restoke.</h1>
             <form onSubmit={handleAddRestoke}>
                 <input type="text" name="name" placeholder='Name' required />
+                <br />
+                <input type="text" name="image" placeholder='Image' required />
                 <br />
                 <input type="text" name="discription" placeholder='Discription' required />
                 <br />
