@@ -14,7 +14,8 @@ import './Login.css'
 // import { Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import Loading from '../Loading/Loading';
-import { Navigate } from 'react-router-dom';
+// import axios from 'axios';
+// import { Navigate } from 'react-router-dom';
 // import useFirebase from '../../hooks/useFirebase';
 const auth = getAuth(app)
 const Login = () => {
@@ -73,6 +74,11 @@ const Login = () => {
     const handleFormSubmit = event => {
         event.preventDefault();
         const form = event.currentTarget;
+        // 
+        // await signInWithEmailAndPassword(email, password);
+        // const { data } = await axios.post('https://intense-spire-59334.herokuapp.com/login', { email });
+        // console.log(data);
+        // 
 
         if (form.checkValidity() === false) {
 
@@ -99,6 +105,7 @@ const Login = () => {
             })
         event.preventDefault();
     }
+    // Email verification
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(() => {
@@ -106,6 +113,7 @@ const Login = () => {
                 toast('sent email')
             })
     }
+    // Reset password
     const handlePasswordReset = () => {
         sendPasswordResetEmail(auth, email)
             .then(() => {

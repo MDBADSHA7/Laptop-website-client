@@ -7,7 +7,7 @@ const InventoryItem = () => {
     const [page, setPage] = useState(0);
     const [size, setSize] = useState(3);
     useEffect(() => {
-        fetch('http://localhost:5000/laptopcount')
+        fetch('https://intense-spire-59334.herokuapp.com/laptopcount')
             .then(res => res.json())
             .then(data => {
                 const count = data.count;
@@ -16,7 +16,7 @@ const InventoryItem = () => {
             })
     }, [])
     useEffect(() => {
-        fetch(`http://localhost:5000/laptop?page=${page}&size=${size}`)
+        fetch(`https://intense-spire-59334.herokuapp.com/laptop?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [page, size])
@@ -24,7 +24,7 @@ const InventoryItem = () => {
         <div>
 
             <h2 className='product-title'>Our-Collection</h2>
-            <h1 className='Total-item'>Total product : {products.length}</h1>
+            {/* <h1 className='Total-item'>Total product : {products.length}</h1> */}
             <div className='products-container'>
                 {products.map(product => <Product
                     key={product._id}

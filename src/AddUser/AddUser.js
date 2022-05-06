@@ -10,7 +10,7 @@ const AddUser = () => {
         const price = event.target.name.value;
         const sold = event.target.name.value;
         const user = { name, discription, quantity, supplier, price, sold };
-        fetch('http://localhost:5000/user', {
+        fetch('https://intense-spire-59334.herokuapp.com/user', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

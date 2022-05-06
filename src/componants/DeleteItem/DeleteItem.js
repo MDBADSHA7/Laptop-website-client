@@ -5,7 +5,7 @@ import './DeleteItem.css'
 const DeleteItem = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/user')
+        fetch('https://intense-spire-59334.herokuapp.com/user')
             .then(res => res.json())
             .then(data => setUsers(data));
     }, [])
@@ -13,7 +13,7 @@ const DeleteItem = () => {
         const proceed = window.confirm('Do you want to delete?')
         if (proceed) {
             console.log('Delete user with id,', id)
-            const url = `http://localhost:5000/user/${id}`
+            const url = `https://intense-spire-59334.herokuapp.com/user/${id}`
             fetch(url, {
                 method: 'Delete'
             })
