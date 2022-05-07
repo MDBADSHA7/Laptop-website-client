@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { TrashIcon } from '@heroicons/react/solid'
 import './DeleteItem.css'
-import { Button } from 'react-bootstrap';
-
 const DeleteItem = () => {
     const [users, setUsers] = useState([]);
     useEffect(() => {

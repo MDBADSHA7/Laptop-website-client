@@ -5,21 +5,14 @@ import app from '../../firebase.init';
 import { } from '@fortawesome/free-solid-svg-icons';
 
 // Toast
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-
-
 import './Login.css'
-// import { Navigate } from 'react-router-dom';
 import { Form, Button } from 'react-bootstrap';
 import Loading from '../Loading/Loading';
-// import axios from 'axios';
-// import { Navigate } from 'react-router-dom';
-// import useFirebase from '../../hooks/useFirebase';
 const auth = getAuth(app)
 const Login = () => {
-    // const { signInWithGoogle } = useFirebase();
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
     const googleProvider = new GoogleAuthProvider();
@@ -74,12 +67,6 @@ const Login = () => {
     const handleFormSubmit = event => {
         event.preventDefault();
         const form = event.currentTarget;
-        // 
-        // await signInWithEmailAndPassword(email, password);
-        // const { data } = await axios.post('https://intense-spire-59334.herokuapp.com/login', { email });
-        // console.log(data);
-        // 
-
         if (form.checkValidity() === false) {
 
             event.stopPropagation();
@@ -105,7 +92,7 @@ const Login = () => {
             })
         event.preventDefault();
     }
-    // Email verification
+    // Send Email verification
     const verifyEmail = () => {
         sendEmailVerification(auth.currentUser)
             .then(() => {
@@ -113,7 +100,7 @@ const Login = () => {
                 toast('sent email')
             })
     }
-    // Reset password
+    // Send Message for Reset password
     const handlePasswordReset = () => {
         sendPasswordResetEmail(auth, email)
             .then(() => {

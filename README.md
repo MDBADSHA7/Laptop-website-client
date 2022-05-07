@@ -11,6 +11,10 @@
 * I use react router.
 * I made a 404 page of this website.
 * I use firebase aurthentication of this project.
-* I use hear react-firebase-hooks
+* I use hear react-firebase-hooks.
 * I use spinner for update button.
 * I use toast for reseat email password.
+* I use alart for delete and add item.
+* I use AXIOX for my project.
+* I create two social login system for my project.
+* I make a protect route for my project.

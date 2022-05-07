@@ -1,9 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
-import AddUser from './AddUser/AddUser';
 import './App.css';
 import Blogs from './componants/Blogs/Blogs';
-import DeleteItem from './componants/DeleteItem/DeleteItem';
 import Header from './componants/Header/Header';
 import Home from './componants/Home/Home';
 import Login from './componants/Login/Login';

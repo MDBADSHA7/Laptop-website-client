@@ -51,7 +51,9 @@ const InventoryItem = () => {
             <div>
                 <Button onClick={ManageInventory} className='Manage-Inventory-btn-2'>Manage-Inventories</Button>
             </div>
+
             {/* paigination */}
+
             <div className='paigination'>
                 {
                     [...Array(pageCount).keys()]
