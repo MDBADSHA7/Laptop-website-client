@@ -9,12 +9,6 @@ const Product = ({ product }) => {
             .then(res => res.json())
             .then(data => setUsers(data));
     }, [])
-
-    const handleQuantity = event => {
-        const Quantity = quantity - 1
-        console.log(Quantity)
-    }
-
     return (
         <div className='card' style={{ width: "18rem" }}>
             <div> <img src={image} class="card-img-top" alt="..." />
@@ -25,7 +19,12 @@ const Product = ({ product }) => {
                     <p className="suppliar">Supplier : {supplier}</p>
                     <p className="price">Price : $ {price}</p>
                     <p className="sold">Sold: {sold}</p>
-                    <button onClick={handleQuantity} className='Delivered-button'>Delivered <TrashIcon className='Icon'></TrashIcon></button>
+                    <button className='Delivered-button'>Delivered <TrashIcon className='Icon'></TrashIcon></button>
+                    <form className='mt-2'>
+                        <input className='Restoke-Quantity' type="number" placeholder='Restoke-Quantity' required></input>
+                        <br />
+                        <input className='Restoke' type="submit" value="Restoke" />
+                    </form>
                 </div>
 
             </div>

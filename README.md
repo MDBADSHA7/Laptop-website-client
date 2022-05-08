@@ -2,7 +2,9 @@
 
 #Tittle:Laptop werwhouse website with nodejs and mongodb.
 
-#Github link by [https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-MDBADSHA7](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-MDBADSHA7)
+#Claint site Github link by [https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-MDBADSHA7](https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-MDBADSHA7)
+
+#Server site Github link by [https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-MDBADSHA7](https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-MDBADSHA7)
 
 ## Live Site Link:[https://laptop-werehouse-website.web.app/](https://laptop-werehouse-website.web.app/)
 

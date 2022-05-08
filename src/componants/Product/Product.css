@@ -60,3 +60,20 @@
     border: 5px solid brown;
     transition-duration: 5s;
 }
+
+.Restoke-Quantity {
+    font-size: x-large;
+    width: 100%;
+    color: lightseagreen;
+    border: 5px solid red;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.Restoke {
+    font-size: xx-large;
+    background-color: red;
+    color: white;
+    border: 5px solid white;
+    border-radius: 10px;
+}

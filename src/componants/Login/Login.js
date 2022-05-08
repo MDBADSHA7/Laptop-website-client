@@ -61,9 +61,6 @@ const Login = () => {
     const handlePasswordBlur = event => {
         setPassword(event.target.value)
     }
-
-
-
     const handleFormSubmit = event => {
         event.preventDefault();
         const form = event.currentTarget;
